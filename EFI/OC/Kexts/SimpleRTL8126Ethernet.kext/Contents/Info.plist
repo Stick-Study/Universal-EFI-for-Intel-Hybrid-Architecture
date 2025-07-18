@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21G217</string>
+	<string>24F74</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>AppleIGC</string>
+	<string>SimpleRTL8126Ethernet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.sxx.AppleIGC</string>
+	<string>cn.laobamac.SimpleRTL8126Ethernet</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>AppleIGC</string>
+	<string>SimpleRTL8126Ethernet</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4</string>
+	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,58 +25,66 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.4d1</string>
+	<string>1.0.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>14C18</string>
+	<string>24F74</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>13.1</string>
+	<string>15.5</string>
 	<key>DTSDKBuild</key>
-	<string>22C55</string>
+	<string>24F74</string>
 	<key>DTSDKName</key>
-	<string>macosx13.1</string>
+	<string>macosx15.5</string>
 	<key>DTXcode</key>
-	<string>1420</string>
+	<string>1640</string>
 	<key>DTXcodeBuild</key>
-	<string>14C18</string>
+	<string>16F6</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>i225</key>
+		<key>SimpleRTL8126</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.sxx.AppleIGC</string>
+			<string>cn.laobamac.SimpleRTL8126Ethernet</string>
+			<key>Driver Parameters</key>
+			<dict>
+				<key>disableASPM</key>
+				<true/>
+				<key>enableCSO6</key>
+				<true/>
+				<key>enableEEE</key>
+				<true/>
+				<key>enableTSO4</key>
+				<true/>
+				<key>enableTSO6</key>
+				<true/>
+				<key>fallbackMAC</key>
+				<string></string>
+				<key>µsPollInt2500</key>
+				<integer>110</integer>
+			</dict>
+			<key>Driver Version</key>
+			<string>1.0.0</string>
 			<key>IOClass</key>
-			<string>AppleIGC</string>
+			<string>SimpleRTL8126</string>
 			<key>IOPCIMatch</key>
-			<string>0x15f28086 0x15f38086 0x15f88086</string>
+			<string>0x812610ec</string>
 			<key>IOProbeScore</key>
-			<integer>4000</integer>
+			<integer>1000</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-			<key>NETIF_F_TSO</key>
-			<true/>
-		</dict>
-		<key>i226</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.sxx.AppleIGC</string>
-			<key>IOClass</key>
-			<string>AppleIGC</string>
-			<key>IOPCIMatch</key>
-			<string>0x125c8086 0x125b8086 0x125d8086 0x31028086</string>
-			<key>IOProbeScore</key>
-			<integer>4000</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>NETIF_F_TSO</key>
-			<true/>
+			<key>Model</key>
+			<string>RTL8126</string>
+			<key>Vendor</key>
+			<string>Realtek</string>
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.13</string>
+	<string>10.15</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2025 王孝慈 All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IONetworkingFamily</key>
@@ -93,6 +101,6 @@
 		<string>8.10.0</string>
 	</dict>
 	<key>OSBundleRequired</key>
-	<string>Root</string>
+	<string>Network-Root</string>
 </dict>
 </plist>
