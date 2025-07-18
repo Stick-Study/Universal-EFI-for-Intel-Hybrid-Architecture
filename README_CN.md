@@ -1,6 +1,6 @@
-600/700 系列主板通用 EFI 配置文件
+Intel 混合核心结构主板通用 EFI 配置文件
 ========
-提供给 600/700 系列主板使用的通用 EFI，附带安装时的设置以及常用的 kext
+提供给 Intel 混合核心结构主板使用的通用 EFI，附带安装时的设置以及常用的 kext
 
 [English](https://github.com/Fu-Yuxuan-hub/Generic-EFI-for-H610-B660-Z690-B760-Z790/blob/main/README.md)<br>
 简体中文 (当前)

@@ -1,6 +1,6 @@
-Generic EFI for 600/700 series motherboards
+Universal-EFI-for-Intel-Hybrid-Architecture
 ========
-Generic EFI for 600/700 series motherboards, with installation settings and common kexts
+Universal-EFI-for-Intel-Hybrid-Architecture, with installation settings and common kexts
 
 English(current)<br>
 [简体中文](https://github.com/Fu-Yuxuan-hub/Generic-EFI-for-H610-B660-Z690-B760-Z790/blob/main/README_CN.md)
@@ -102,24 +102,6 @@ Others:
 | iGPU                      | Disabled      | *Reserved Memory Region* will appear |
 | Execute Disable Bit       | Enabled          |                                 |
 | Legacy RTC Device         | Enabled          |                                 |
-
-## About Intel Arrow Lake-S and 800-series motherboard
-
-From [vit9696](https://www.tonymacx86.com/threads/intel-core-ultra-9-testing.330837/post-2414232)
-
-macOS builds ACPI tree in the following order: firstly devices declared unconditionally, then devices declared conditionally (inside ifs). This applies both to Device (initial) declarations and Scope (extension) declarations. Device declarations must precede Scope declarations.
-
-What happens with Z890 ACPI is that while Scope declaration of _SB.PC02.RP01.PXSX succeeds Device declaration as normal, Scope declaration of _SB.PC02, which contains _SB.PC02.RP01.PXSX Device declaration, is conditional. This makes PXSX inaccessible from the ACPI interpreter and aborts DSDT loading.
-
-Removing the condition helps the problem.
-
-ACPI Patch:
-Code:
-Find:     A0 00 00 00 92 93 50 43 48 41 00
-Replace:  A3 A3 A3 A3 A3 A3 A3 A3 A3 A3 A3
-FindMask: FF 00 00 00 FF FF FF FF FF FF FF
-Count:    1
-TableSignature: DSDT
 
 ## Contribution
 
